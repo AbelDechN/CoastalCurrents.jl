@@ -4,6 +4,7 @@ Contribution to the [BlueCloud 2026](https://blue-cloud.org/) project for the vi
 Here is a direct link to the [JupyterHub instance](https://jupyterhub.d4science.org/hub/oauth_login?context=%2Fd4science.research-infrastructures.eu%2FD4OS%2FCoastalCurrentsFromObservations).
 
 You will need to have [Julia 1.9](https://julialang.org/downloads/) installed. Start julia and issue the following command:
+TESTESTEST
 
 
 ## Installation
