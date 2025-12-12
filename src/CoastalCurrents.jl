@@ -18,8 +18,8 @@ function loaddata(fname::AbstractString);
     lon = ds["LONGITUDE"][:];
     position_qc = ds["POSITION_QC"][:];
     lat = ds["LATITUDE"][:]
-    z = ds["DEPH"][:]
-    z_qc = ds["DEPH_QC"][:]
+#    z = ds["DEPH"][:]
+#    z_qc = ds["DEPH_QC"][:]
 
     u = ds["EWCT"][1,:]
     u_qc = ds["EWCT_QC"][1,:]
@@ -35,7 +35,7 @@ function loaddata(fname::AbstractString);
     @show length(lon)
     lat[.!good.(position_qc)] .= NaN;
     @show length(lat)
-    z[.!good.(z_qc)] .= NaN;
+#    z[.!good.(z_qc)] .= NaN;
     time[.!good.(time_qc)] .= DateTime(9999,1,1);
     u[.!good.(u_qc)] .= NaN;
     v[.!good.(v_qc)] .= NaN;
@@ -44,7 +44,7 @@ function loaddata(fname::AbstractString);
  #   lat = repeat(reshape(lat,(1,:)),size(z,1))
  #   time = repeat(reshape(time,(1,:)),size(z,1))
     close(ds)
-    return lon[:],lat[:],z[:],time[:],u[:],v[:]
+    return lon[:],lat[:],time[:],u[:],v[:]
 end
 
 
@@ -54,12 +54,12 @@ function loaddata(files::AbstractVector{<:AbstractString});
     # concatenate all profiles
     lon = reduce(vcat,getindex.(data,1))
     lat = reduce(vcat,getindex.(data,2))
-    z = reduce(vcat,getindex.(data,3))
+#    z = reduce(vcat,getindex.(data,3))
     time = reduce(vcat,getindex.(data,4))
     u = reduce(vcat,getindex.(data,5))
     v = reduce(vcat,getindex.(data,6))
 
-    return lon[:],lat[:],z[:],time[:],u[:],v[:]
+    return lon[:],lat[:],time[:],u[:],v[:]
 end
 
 

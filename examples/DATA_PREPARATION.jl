@@ -140,10 +140,8 @@ for (root, dirs, files2) in walkdir(hf_dir); #le directory précisé dans le com
 end
 
 
-filesHFRadar_avg = filesHFRadar[21:end-3];
+filesHFRadar_avg = filesHFRadar[:];
 
-
-filesHFRadar_avg = [filesHFRadar_avg[1:3]; filesHFRadar_avg[8:12];filesHFRadar_avg[14];filesHFRadar_avg[16:end]];
 
 
 lonh,lath,timeh,rdvah,drvah = CoastalCurrents.HFRadar.loaddata(filesHFRadar_avg);
@@ -300,7 +298,7 @@ deleteat!(drifter_id, indices_a_supprimer_latv);
 
 # Defining the subset for the cross validation  
 ############# test cvr ##############################################################
-dsValid = NCDataset("/home/jovyan/CoastalCurrents.jl/examples/ValidIndices.nc")
+dsValid = NCDataset("/home/jovyan/CoastalCurrents/examples/ValidIndices.nc")
 
 for_cv = dsValid["for_cv"][:] 
 

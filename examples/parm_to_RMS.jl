@@ -281,7 +281,7 @@ vecteurVisansNaN[i] = reinterpole_vri[i][.!indicesNaNv[i]]
 vecteurVOBSsansNaN[i] = vdov1_[i][.!indicesNaNv[i]]
 
 #on calcule la corrélation
-println("correlation for u on the $i th month is : ",cor(vecteurVisansNaN[i],vecteurVOBSsansNaN[i]))
+println("correlation for v on the $i th month is : ",cor(vecteurVisansNaN[i],vecteurVOBSsansNaN[i]))
 println("")
 
         
@@ -385,7 +385,7 @@ sommeRMS[1] += RMStot[i];  # Ajouter la valeur à la somme
 
 return (vecteurUisansNaN,
         vecteurVisansNaN,vecteurUOBSsansNaN,vecteurVOBSsansNaN,
-        udov1_,vdov1_,reinterpole_uri,reinterpole_vri,xo1_,yo1_,speedo,speedi_,xval,yval); # return of the function
+        udov1_,vdov1_,reinterpole_uri,reinterpole_vri,xo1_,yo1_,speedo,speedi_,xval,yval,weightedRMS); # return of the function
     
     
 
