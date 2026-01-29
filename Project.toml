@@ -1,7 +1,7 @@
 name = "CoastalCurrents"
 uuid = "12750a1a-8500-4ab4-99d8-5bd0a9331725"
-authors = ["Alexander Barth <barth.alexander@gmail.com>"]
 version = "0.1.0"
+authors = ["Abel Dechenne and Alexander Barth <barth.alexander@gmail.com>"]
 
 [deps]
 BlackBoxOptim = "a134a8b2-14d6-55f6-9291-3336d3ab0209"
@@ -34,3 +34,13 @@ ScatteredInterpolation = "3f865c0f-6dca-5f4d-999b-29fe1e7e3c92"
 Statistics = "10745b16-79ce-11e8-11f9-7d13ad32a3b2"
 StatsBase = "2913bbd2-ae8a-5f71-8c99-4fb6c76f3a91"
 TypedTables = "9d95f2ec-7b3d-5a63-8d20-e2491e220bb9"
+
+[sources]
+DIVAnd_HFRadar = {rev = "master", url = "https://github.com/gher-uliege/DIVAnd_HFRadar.jl"}
+OceanPlot = {rev = "master", url = "https://github.com/gher-uliege/OceanPlot.jl"}
+
+[compat]
+DIVAnd = "2.7.13"
+DIVAnd_HFRadar = "0.1.0"
+NCDatasets = "0.14.10"
+OceanPlot = "0.1.0"
