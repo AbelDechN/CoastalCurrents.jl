@@ -10,7 +10,7 @@ You will need to have [Julia 1.9 or later](https://julialang.org/downloads/) ins
 
 ```julia
 using Pkg
-Pkg.add("https://github.com/AbelDechN/CoastalCurrents.jl")
+Pkg.add(url = "https://github.com/AbelDechN/CoastalCurrents.jl")
 ```
 
 ```bash
